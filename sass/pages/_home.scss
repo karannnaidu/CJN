@@ -1,0 +1,197 @@
+.section-about {
+    background-color: $color-grey-light-1;
+    padding: 5rem 0rem;
+   // position: relative;
+   @include respond (phone){//600
+    padding: 3rem 0;
+}
+
+}
+
+.section-development {
+    background-color: $color-black;
+    padding: 4rem 0rem;
+    @include respond (phone){//600
+        padding: 3.5rem 0;
+    }
+  //  position: relative;
+}
+
+.section-projects {
+    background-color: $color-white;
+    padding: 5rem 0rem;
+ //   position: relative;
+
+}
+
+.section-images {
+    // background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    //      url("../img/cjn-welcome.jpg");
+    padding: 5rem 0rem;
+    background-size: cover;
+    background-position: center 12.2727px;
+    //height: 113vh;
+    // max-width: 100%;
+    // height: auto;
+    // background-attachment: fixed;
+   // position: relative;
+
+}
+
+.section-sai-fortune {
+    background-color: $color-white;
+    padding: 5rem 0rem;
+  // position: relative;
+  @include respond (phone500){
+    padding: 4rem 0rem;
+}
+  @include respond (phonesmall){
+    padding: 3.5rem 0rem;
+}
+@include respond (phonesmaller){
+    padding: 3rem 0rem;
+}
+@include respond (phone300){
+    padding: 2.5rem 0rem;
+}
+@include respond (phone260){
+    padding: 2rem 0rem;
+}
+}
+
+.sai-fortune-2 {
+    background-color: $color-white;
+    padding: 5rem 0rem;
+  //  position: relative;
+
+}
+.section-golden{
+    padding: 5rem 3rem;
+}
+.section-enclave{
+    padding: 5rem 0;
+}
+.section-residency{
+    padding: 5rem 0;
+}
+.section-temple{
+    padding:0 0 5rem 0;
+   // padding-bottom: unset !important;
+}
+.section-ourteam {
+    background-color: $color-grey-light-1;
+    padding: 1rem 0rem;
+   // position: relative;
+}
+.section-book{
+    background-color: $color-black;
+    padding: 7rem 3rem;
+    @include respond (tab-port){
+        padding: 5rem 2rem;
+    }
+    
+}
+.section-book1{
+
+    padding: 7rem 3rem;
+}
+.section-test{
+    background-color: $color-white;
+    padding: 5rem 0rem; 
+}
+.footer{
+    padding: 1rem 1rem 3rem 0;
+}
+
+
+
+
+.book {
+
+    background-image: linear-gradient(105deg,
+            rgba($color-white, .9)0%,
+            rgba($color-white, .9)50%,
+            transparent 50%),
+        url(../img/nat-10-small.jpg);
+   // background-size: 100%; // same as cover
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .3);
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   background-size: cover;
+
+   @include respond (phone500){
+    background-image: linear-gradient(105deg,
+            rgba($color-white, .9)0%,
+            rgba($color-white, .9)50%),
+        url(../img/nat-10-small.jpg);
+        background-size: cover;
+}
+    &__form {
+        width: 50%;
+        padding: 2rem;
+        @include respond (phone){
+            padding: 1rem;
+            width: 95%;
+        }
+       
+    }
+}
+.book1 {
+
+    background-image: linear-gradient(105deg,
+            rgba($color-white, .9)0%,
+            rgba($color-white, .9)50%,
+            transparent 50%),
+        url(../img/nat-10-small.jpg);
+   // background-size: 100%; // same as cover
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .3);
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   background-size: cover;
+
+   @include respond (phone){
+    background-image: linear-gradient(105deg,
+            rgba($color-white, .9)0%,
+            rgba($color-white, .9)50%),
+        url(../img/nat-10-small.jpg);
+        background-size: cover;
+}
+  
+}
+.book2 {
+
+    background-image: linear-gradient(105deg,
+            rgba($color-white, .9)0%,
+            rgba($color-white, .9)50%,
+            transparent 50%),
+        url(../img/m-19.jpg);
+   // background-size: 100%; // same as cover
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .3);
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   background-size: cover;
+
+   @include respond (phone){
+    background-image: linear-gradient(105deg,
+    rgba($color-white, .01)0%,
+    rgba($color-white, .01)50%,
+    transparent 50%),
+url(../img/m-19-compress.jpg);
+        background-size: cover;
+}
+    &__form {
+        width: 50%;
+        padding: 2rem;
+        @include respond (phone500){
+            padding: 1rem;
+            width: 95%;
+        }
+       
+    }
+}

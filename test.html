@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+        .box {
+            display: block;
+
+
+        }
+
+        .content {
+            background-color: #bdc3c7;
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height .6s ease-out;
+        }
+
+        .content p {
+            text-align: center;
+            padding: 10px 20px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 20px;
+            padding: 10px 15px;
+            color: white;
+            background-color: rgba(52, 73, 94, 1.0);
+        }
+
+        .title:hover {
+            cursor: pointer;
+            background: linear-gradient(to left, rgba(44, 62, 80, 1.0), rgba(52, 73, 94, 1.0), rgba(44, 62, 80, 1.0));
+        }
+
+        .title:not(.not-border) {
+            border-top: solid white 1px;
+        }
+
+        .opened+.content {
+            max-height: 500px;
+            transition: max-height 1.2s ease-out;
+        }
+
+
+        .arrow {
+            position: absolute;
+            padding: 0;
+            margin: 0;
+            border-top: 10px solid transparent;
+            border-right: 0 solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 10px solid white;
+            transition: .6s ease-in;
+        }
+
+        .opened .arrow {
+            transform: rotate(90deg);
+        }
+
+        figure.zoom {
+            background-position: 50% 50%;
+            position: relative;
+            width: 700px;
+            overflow: hidden;
+            cursor: zoom-in;
+        }
+
+        figure.zoom img:hover {
+            opacity: 0;
+        }
+
+        figure.zoom img {
+            transition: opacity 0.5s;
+            display: block;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="title not-border" onclick="toggleBox(this)">
+            <div class="arrow"></div>
+            <div class="title-text">Primeiro</div>
+        </div>
+        <div class="content">
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus eum tempora sunt beatae,
+                voluptatibus, iste vero excepturi aspernatur tenetur pariatur qui quaerat dolorum maxime dolor
+                voluptatem earum asperiores, enim quo.
+            </p>
+            <figure class="zoom" id="zoom" style="background-image: url(img/cjn-hero-4.jpg)">
+                <img src="img/cjn-hero-4.jpg" />
+            </figure>
+            <figure class="zoom" onmousemove="zoom(event)" style="background-image: url(img/cjn-hero-4.jpg)">
+                <img src="img/cjn-hero-4.jpg" />
+            </figure>
+        </div>
+
+        <div class="title" onclick="toggleBox(this)">
+            <div class="arrow"></div>
+            <div class="title-text">Segundo</div>
+        </div>
+        <div class="content">
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus eum tempora sunt beatae,
+                voluptatibus, iste vero excepturi aspernatur tenetur pariatur qui quaerat dolorum maxime dolor
+                voluptatem earum asperiores, enim quo.
+            </p>
+        </div>
+
+        <div class="title" onclick="toggleBox(this)">
+            <div class="arrow"></div>
+            <div class="title-text">Terceiro</div>
+        </div>
+        <div class="content">
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus eum tempora sunt beatae,
+                voluptatibus, iste vero excepturi aspernatur tenetur pariatur qui quaerat dolorum maxime dolor
+                voluptatem earum asperiores, enim quo.
+            </p>
+        </div>
+
+        <div class="title" onclick="toggleBox(this)">
+            <div class="arrow"></div>
+            <div class="title-text">Quarto</div>
+        </div>
+        <div class="content">
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus eum tempora sunt beatae,
+                voluptatibus, iste vero excepturi aspernatur tenetur pariatur qui quaerat dolorum maxime dolor
+                voluptatem earum asperiores, enim quo.
+            </p>
+        </div>
+
+        <div class="title" onclick="toggleBox(this)">
+            <div class="arrow"></div>
+            <div class="title-text">Quinto</div>
+        </div>
+        <div class="content">
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus eum tempora sunt beatae,
+                voluptatibus, iste vero excepturi aspernatur tenetur pariatur qui quaerat dolorum maxime dolor
+                voluptatem earum asperiores, enim quo.
+            </p>
+        </div>
+
+        <div class="title" onclick="toggleBox(this)">
+            <div class="arrow"></div>
+            <div class="title-text">Sexto</div>
+        </div>
+        <div class="content">
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus eum tempora sunt beatae,
+                voluptatibus, iste vero excepturi aspernatur tenetur pariatur qui quaerat dolorum maxime dolor
+                voluptatem earum asperiores, enim quo.
+            </p>
+        </div>
+    </div>
+
+</body>
+<script>
+    const el = document.querySelector("#zoom");
+
+    el.addEventListener("mousemove", (e) => {
+
+
+        e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
+        e.offsetY ? offsetY = e.offsetY : offsetX = e.touches[0].pageX
+        x = offsetX / el.offsetWidth * 100
+        y = offsetY / el.offsetHeight * 100
+        el.style.backgroundPosition = x + '% ' + y + '%';
+
+    });
+    function toggleBox(x) {
+        x.classList.toggle('opened');
+    }
+    function zoom(e) {
+
+        var zoomer = e.currentTarget;
+        e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
+        e.offsetY ? offsetY = e.offsetY : offsetX = e.touches[0].pageX
+        x = offsetX / zoomer.offsetWidth * 100
+        y = offsetY / zoomer.offsetHeight * 100
+        zoomer.style.backgroundPosition = x + '% ' + y + '%';
+    }
+    function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+    }
+</script>
+
+</html>

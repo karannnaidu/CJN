@@ -1,0 +1,816 @@
+ @mixin transparent {
+  height: 4rem;
+  max-width: 34rem;
+  word-spacing: .3rem;
+  text-transform: capitalize;
+    //  background: transparent;    
+  letter-spacing: 1px;
+ background-color: rgba(0, 0, 0, .6);
+margin-left: 11rem;
+// margin-top: 6rem !important ;// transparent and white heading are interconnected
+ font-size: 2rem;
+ text-align: center;
+ text-shadow: rgba(0, 0, 0, .7);
+ color: $color-white;
+  
+}
+
+
+body {
+
+  font-weight: 400;
+  font-size: $default-font-size;
+  line-height: 1.7;
+  color: $color-grey-dark;
+}
+
+.heading-main {
+  animation: moveInRight 4s ease-out;
+  color: $color-white;
+
+  //text-transform: capitalize;
+  margin-bottom: 6rem;
+  font-weight: 300;
+  // font-family: "Baloo Da 2", cursive;
+  //font-family: 'Jomolhari', serif;
+  letter-spacing: 1.6px;
+
+  font-size: 220%;
+  @include respond (tab-huge){//width <1300?
+    font-size:210% ;
+}
+@include respond (tab-large){//width <1300?
+  font-size:205% ;
+}
+  @include respond(tab-land){//1200
+    font-size:200% ;
+  }
+  @include respond(tab-lp){//1000
+    font-size:195% ;
+  }
+  @include respond (tab-port){//width <900?
+    font-size:200% ;
+
+}
+@include respond(phonelarge){
+  margin-left: 5rem;//750    font-size: 7.5rem;
+ 
+    }
+@include respond(phone){//600
+font-size: 170%;
+}
+@include respond(phonesmall){//400
+  font-size: 165%;
+    }
+}
+
+.heading-primary {
+  //position: absolute;
+
+  color: $color-black;
+  //animation: moveUp 4s ease-out;
+  margin-left: 5rem;
+
+
+  &-main {
+    @include typo-main;
+    @include respond (tab-huge){//1400
+      font-size: 5rem;
+
+      letter-spacing: .9rem;
+  }
+  @include respond (tab-large){//1300
+    font-size: 4rem;
+
+    letter-spacing: .8rem;
+}
+
+
+  @include respond (tab-land){//1200
+    font-size: 3.5rem;
+    letter-spacing: 1rem;
+  }
+ 
+  @include respond (phonelarge){//750
+
+  }
+  @include respond (phone){//600
+    font-size: 2.5rem;
+ letter-spacing: .8rem;
+  }
+  @include respond (phone500){
+  
+  }
+  @include respond(phonesmall){//400
+    font-size: 2.2rem;
+    letter-spacing: .6rem;
+
+        }
+ 
+    &-1 {
+      display: inline-block;
+
+      text-transform: capitalize;
+      @include typo-main; //mixin repetative code
+      color: $color-white;
+    }
+    
+
+  }
+
+  &-sub {
+    margin-top: 2rem;
+    width: 70%;
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 143%;
+    font-family: 'Source Sans Pro', sans-serif;
+    @include respond (big-desktop){
+      font-size:3.2rem;
+    
+  }
+    @include respond (tab-huge){//1400
+      font-size: 2.3rem;
+  }
+  @include respond (tab-large){//1300
+      font-size:2rem;
+  }
+
+  @include respond (tab-land){//1200
+    font-size: 2rem;
+    width: 75%;
+    margin-top: 1rem;
+  }
+  @include respond (tab-lp){//1000
+    font-size: 2.2rem;
+    width: 83%;
+    margin-top: .5rem;
+  }
+  @include respond (tab-port){//900
+
+    width: 90%;
+    margin-top: 1rem;
+
+  }
+  @include respond (phonelarge){//750
+    font-size: 2rem;
+    width:92%;
+    margin-top: 1.2rem;
+  }
+  @include respond (phone){//600
+    font-size: 1.8rem;
+    width:97%;
+    margin-top: 1.4rem;
+    word-wrap: break-word;
+  }
+  @include respond (phone500){
+    font-size: 1.7rem;
+    width:98%;
+    margin-top: 1.2rem;
+    word-wrap: break-word;
+  }
+  @include respond(phonesmall){//400
+    font-size: 1.7rem;
+    width:97%;
+    margin-top: 1.4rem;
+    word-wrap: break-word;
+        }
+ 
+       
+    &-1 {
+  
+  font-size: 2.7rem;
+  margin-top: 2rem;
+  width: 75%;
+  font-size: 2.7rem;
+  font-weight: 400;
+  line-height: 143%;
+      color: $color-white;
+      @include respond (big-desktop){
+        font-size:3.2rem;
+      
+    }
+      @include respond (tab-huge){//1400
+        font-size: 2.5rem;
+    }
+    @include respond (tab-large){//1300
+        font-size:2.5rem;
+    }
+  
+    @include respond (tab-land){//1200
+      font-size: 2.5rem;
+      width: 85%;
+   
+    }
+    @include respond (tab-lp){//1000
+
+    width: 88%;
+      margin-top: 2rem;
+    }
+    @include respond (tab-port){//900
+      font-size: 2.3rem;
+      width: 90%;
+      margin-top: 1.7rem;
+  
+    }
+    @include respond (phonelarge){//750
+      font-size: 2.2rem;
+      width:96%;
+      margin-top: 1.6rem;
+    }
+    @include respond (phone){//600
+    
+      width:98%;
+      margin-top: 1.4rem;
+      word-wrap: break-word;
+    }
+    @include respond (phone500){
+      font-size: 2.1rem;
+    
+      margin-top: 1.3rem;
+      word-wrap: break-word;
+    }
+    @include respond(phonesmall){//400
+      font-size: 2rem;
+      width:97%;
+      margin-top: 1.2rem;
+      word-wrap: break-word;
+          }
+    }
+
+    &-2 {
+   
+    //  @include typo-sub;
+      margin-top: 1rem;
+      color: $color-white;
+
+     // margin-top: 5rem;
+      width: 100%;
+      font-size: 6rem;
+      font-weight: 400;
+      line-height: 143%;
+      @include respond (big-desktop){
+        font-size:6.5rem;
+      
+    }
+    
+    
+  
+    @include respond (tab-land){//1200
+      font-size: 5.5rem;
+    
+    }
+    
+    @include respond (tab-port){//900
+font-size: 5rem;
+  
+    }
+  
+    @include respond (phone){//600
+      font-size: 5rem;
+    }
+   
+    @include respond(phonesmall){//400
+      font-size: 5rem;
+
+          }
+
+     }
+     &-3{
+      color: $color-black;
+      //animation: moveUp 4s ease-out;
+      margin-left: 5rem;
+      font-size: 2rem;
+   // font-weight: 600;
+    font-family: 'Lora', serif;
+  word-spacing: .5rem;
+      font-family: 'Source Sans Pro', sans-serif;
+      //font-size: 2rem !important;
+      width: 92%;
+      //  margin-left: 3rem ;
+        margin-bottom: 1.5rem;
+        @include respond (tab-lp){//1000
+
+          font-size: 1.7rem;
+          width: 95%;
+      }
+      @include respond (tab800){//800
+          
+        font-size: 1.5rem;
+        width: 95%;
+    
+      }
+      @include respond (phone650){
+          
+        font-size: 1.3rem;
+        width: 95%;
+        margin-left: 3rem;
+    
+      }
+      @include respond (phone){//600
+          
+        font-size: 1.5rem;
+
+        margin-left: 2rem;
+    
+      }
+      @include respond (phone500){
+          
+        font-size: 1.4rem;
+
+        margin-left: 1rem;
+    
+      }
+      @include respond(phonesmall){//400
+       
+        font-size: 1.4rem;
+
+        margin-left: 1rem;
+        
+      }
+      @include respond(phonesmaller){//350
+        
+        font-size: 1.3rem;
+
+        margin-left: 1rem;
+          }
+          @include respond(phone300){//300
+            font-size: 1.18rem;
+
+            margin-left: .7rem;
+              }
+              @include respond(phone260){//300
+                font-size: 1.1rem;
+
+                margin-left: .5rem;
+                  }
+
+    }
+    
+    
+  }
+}
+
+.heading-secondary {
+
+  &-main {
+@include typo-main;
+    color: $color-black;
+    text-align: center;
+ margin-top:2rem ;
+ margin-bottom: 2rem;
+ @include respond (big-desktop){
+  font-size:5rem;
+
+}
+
+@include respond (phonelarge){//750
+font-size: 3.5rem;
+margin-top:1.7rem ;
+ margin-bottom: 1.7rem;
+}
+@include respond (phone500){
+font-size: 3rem;
+
+margin-top: 1.5rem;
+margin-bottom: 1.5rem;
+
+}
+@include respond(phonesmall){//400
+font-size:2.7rem;
+
+margin-top: 1.2rem;
+margin-bottom: 1.2rem;
+
+    }
+  }
+
+}
+
+.heading-tertiary {
+  &-main {
+
+    display: inline-block;
+    margin-top: 3rem;
+    margin-left: 3rem;
+
+    //opacity: 0;
+    background-image: linear-gradient(to right, $primary-color, $primary-color-dark-1);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 5rem;
+
+    font-weight: 300;
+    font-family: 'Lora', serif;
+    letter-spacing: .4rem;
+    @include respond (big-desktop){
+      font-size:6rem;
+    
+  }
+    @include respond (tab-lp){//1000
+      font-size: 4.8rem;
+
+  
+    }
+  @include respond (tab-port){//900
+    font-size: 4.5rem;
+  
+
+  }
+  @include respond (phonelarge){//750
+    font-size: 3.5rem;
+
+  }
+  @include respond (phone){//600
+  font-size: 3.1rem;
+
+  margin-top: 2rem;
+  }
+  @include respond (phone500){
+font-size: 3.7rem;
+
+  }
+  @include respond(phonesmall){//400
+    font-size:3rem;
+    
+   
+        }
+         @include respond(phonesmaller){//350
+     
+            font-size: 2.8rem;
+              }
+              @include respond(phone300){//300
+     
+                font-size: 2.6rem;
+                  }
+                  @include respond(phone260){//300
+     
+                    font-size: 2.4rem;
+                      }
+  }
+      
+  &-sub {
+ 
+    margin-top: 6rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 6rem;
+    width: 90%;
+    font-size: 2.2rem;
+    font-weight: 300;
+    line-height: 143%; //mixin repetative code
+    font-family: 'Source Sans Pro', sans-serif;
+    color: $color-black;
+    @include respond (big-desktop){
+      font-size:3.2rem;
+    
+  }
+   
+  @include respond (tab-port){//900
+     
+    margin-top: 5rem;
+    font-size: 2.1rem;
+   
+
+  }
+  @include respond (phonelarge){//750
+    font-size: 2rem;
+    width:96%;
+    margin-top: 4rem;
+  }
+  @include respond (phone){//600
+    font-size: 1.9rem;
+    
+    margin-top: 3.5rem;
+   
+  }
+  @include respond (phone500){
+    font-size: 1.8rem;
+  
+    margin-top: 3rem;
+   
+  }
+  @include respond(phonesmall){//400
+    font-size: 1.7rem;
+   
+    margin-top: 2.4rem;
+    
+        }
+    
+  }
+
+}
+
+.gold-text {
+
+  background-image: linear-gradient(to right, $secondary-color-light, $secondary-color-dark);
+  -webkit-background-clip: text;
+  color: transparent;
+
+}
+
+.green-text {
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.blue-text {
+  background-image: linear-gradient(to right, #2a25bf, #0b0931);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.red-text{
+   background-image: linear-gradient(to right,#ff521d , #611700 );
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.white-heading {
+  //@extend: 0;
+  // visibility: hidden;
+  background: transparent;
+  position: absolute;
+  height: 7rem;
+  width: 60rem;
+ text-transform: capitalize;
+  top: 34rem;
+  left: 48.5rem;
+  font-size: 8rem;
+  //opacity: 0;
+  font-family: 'Source Sans Pro',
+    sans-serif;
+  color: $color-white;
+  text-shadow: 1px 1px rgba(0, 0, 0, .9);
+  word-spacing: 1.8rem;
+  letter-spacing: 2px;
+  text-shadow: rgba(0, 0, 0, .7);
+ 
+}
+.transparent{
+    position: absolute;
+@include transparent;
+   top: 50rem ;
+   left: 50rem;
+   //height: 4rem;
+  
+  &__1{
+    position: absolute;
+    top: 66rem ;
+    left: 14rem;
+@include transparent;
+    word-spacing: .3rem;
+
+    letter-spacing: 1px;
+
+   font-size: 2rem;
+   
+
+  }
+  &__2{
+    position: absolute;
+    top: 67rem ;
+    left: 14rem;
+    word-spacing: .3rem;
+    @include transparent;
+    letter-spacing: 1px;
+    max-width: 50rem;
+   font-size: 2rem;
+   height: unset;
+
+  }
+  &__3{
+    position: absolute;
+    top: 65rem ;
+    left: 3rem;
+    word-spacing: .3rem;
+    @include transparent;
+    letter-spacing: 1px;
+    margin-left: 3rem !important;
+    max-width: 50rem;
+   font-size: 2rem;
+   height: unset;
+
+  }
+  &__4{
+    position: absolute;
+    bottom:  .8rem ;
+    left: 3rem;
+    word-spacing: .3rem;
+    @include transparent;
+    letter-spacing: 1px;
+    margin-left: 3rem !important;
+    max-width: 50rem;
+   font-size: 2rem;
+   height: unset;
+
+  }
+
+}
+.info-box{
+  text-align: center;
+  font-size: 4rem;
+  color:$color-black;
+  @include respond (big-desktop){
+    font-size:5rem;
+  
+}
+  @include respond (tab-lp){//1000
+    font-size: 3.8rem;
+    margin-bottom: 6rem!important;
+
+
+  }
+@include respond (tab-port){//900
+  font-size: 3.5rem;
+  margin-bottom: 5.6rem!important;
+
+
+}
+@include respond (phonelarge){//750
+  font-size: 3.5rem;
+  margin-bottom: 5.3rem!important;
+
+}
+@include respond (phone){//600
+font-size: 3.1rem;
+margin-bottom: 5rem!important;
+}
+@include respond (phone500){
+font-size: 3rem;
+margin-bottom: 4.5rem!important;
+}
+@include respond(phonesmall){//400
+  font-size:2.7rem;
+  margin-bottom: 4rem!important;
+ 
+      }
+}
+.feature-box{
+  color: $secondary-color-dark;
+  font-size: 2rem;
+
+}
+.big-text{
+  
+      font-size: 3.6rem;
+    font-weight: 600;
+
+  word-spacing: .5rem;
+      font-family: 'Source Sans Pro', sans-serif;
+   
+}
+.fortune-block-text{
+  //float:left;
+  margin-right: 1rem;
+
+}
+.fortune-li{
+  &:first-child{
+    margin-top: 3rem;
+  }
+  margin-bottom: 1rem;
+  margin-left:4rem ;
+  
+  background-image: linear-gradient(to right, $secondary-color-light, $secondary-color-dark);
+  -webkit-background-clip: text;
+  color: transparent;
+font-weight: bold;
+
+ul {
+  list-style: none;
+}
+&::before {
+  content: "\2022";
+  color: red;
+  font-weight: bold;
+  display: inline-block; 
+  width: 2rem;
+  margin-right: 1rem;
+  font-size: 3rem;
+}
+}
+.break{
+  @include respond (phone500){
+  display: block;
+  margin-left: 2rem;
+      }
+      
+}
+.break1{
+  @include respond (phone500){
+  display: block;
+  margin-top: 1.5rem;
+}
+@include respond (phone){
+  
+  margin-top: 1rem;
+}
+
+}
+.margin-adjust{
+  @include respond (tab800){
+  margin-left: 12rem!important;
+  }
+  @include respond (tab-port){//900
+   margin-left: 11rem!important;
+  
+
+  }
+  @include respond (phonelarge){//750
+    margin-left: 9rem!important;
+
+  }
+  @include respond (phone){//600
+  margin-left: 7rem!important;
+  }
+  @include respond (phone500){
+margin-left: 4rem!important; 
+
+  }
+  @include respond(phonesmall){//400
+    margin-left:3rem!important;
+    
+   
+        }
+        @include respond(phone350){
+          margin-left:2rem!important;
+          
+         
+              }
+              @include respond(phone300){
+                margin-left:1.5rem!important;
+                font-size: 1.8rem!important;
+                
+               
+                    }
+}
+.fortune-res-text{
+  font-family: 'Cinzel', serif; letter-spacing: 2rem;font-size:5rem; word-spacing: 3rem;
+  @include respond (tab800){//800
+font-size: 4.5rem;
+word-spacing: 2.5rem;
+letter-spacing: 1.5rem;
+}
+@include respond (phone650){//650
+  font-size: 4rem;
+  word-spacing: 2rem;
+  letter-spacing: 1rem;
+}
+@include respond (phone500){
+  font-size: 3.5rem;
+  word-spacing: 1.5rem;
+  letter-spacing: .8rem;
+}
+@include respond(phonesmall){//400
+     
+  font-size: 3rem;
+  word-spacing: 1.2rem;
+  letter-spacing: 1rem;
+    }
+    @include respond(phonesmaller){//350
+     
+         
+  font-size: 2.8rem;
+  word-spacing: 1rem;
+  letter-spacing: 1rem;
+        }
+        @include respond(phone300){//300
+
+     
+          font-size: 2.5rem;
+          word-spacing: 1rem;
+          letter-spacing: .7rem;
+            }
+            @include respond(phone260){//300
+     
+              font-size: 2.4rem;
+              word-spacing: 1rem;
+              letter-spacing: .5rem;
+                }
+}
+.big-font{
+  font-size: 4rem;
+  @include respond (phone){//600
+    
+ font-size: 3.5rem;
+}
+@include respond (phone500){
+font-size: 3.4rem;
+}
+@include respond(phonesmall){//400
+     
+font-size: 3.2rem;
+    }
+    @include respond(phonesmaller){//350
+
+font-size: 3rem;
+        }
+        @include respond(phone300){//300
+     
+          font-size: 2.8rem;
+            }
+            @include respond(phone260){//300
+
+              font-size: 2.5rem;
+                }
+}

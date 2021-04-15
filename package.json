@@ -1,0 +1,17 @@
+{
+  "name": "cjn",
+  "version": "1.0.0",
+  "description": "\"landing page for cjn properties\"",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass --watch   sass/main.scss   css/style.css"
+  },
+  "author": "karan naidu c",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  },
+  "dependencies": {
+    "bxslider": "^4.2.14"
+  }
+}

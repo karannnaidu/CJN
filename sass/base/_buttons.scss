@@ -1,0 +1,118 @@
+.button {
+    &__arrow {
+        margin-left: 1rem;
+        //margin-top: .2rem;
+        height: 2rem;
+        text-align: center;
+        padding-top: 1px;
+        @include respond (phone500){
+            margin-left: 0.7rem;
+            height: 1.5rem;
+        }
+        @include respond (phonesmaller){
+            margin-left: 0.5rem;
+            height: 1.3rem;
+        }
+        @include respond (phone300){
+            margin-left: 0.4rem;
+            height: 1.2rem;
+        }
+        @include respond (phone260){
+            margin-left: 0.3rem;
+            height: 1rem;
+        }
+    }
+
+    //   border: 1px solid $secondary-color;
+    border-radius: .3rem;
+    padding-top: 1rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    display: inline-block;
+
+    border-top-width: .2rem;
+    border-right-width: .2rem;
+    border-bottom-width: .2rem;
+    border-left-width: .2rem;
+    border-top-left-radius: .2rem;
+    border-top-right-radius: .2rem;
+    border-bottom-left-radius: .2rem;
+    border-bottom-right-radius: .2rem;
+
+    background: linear-gradient(to right, $secondary-color-dark-2 50%, $secondary-color-dark 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+    @include respond (phone500){
+        padding-top: .7rem;
+        padding-right: 1.2rem;
+        padding-bottom: 0.7rem;
+        padding-left: 1.2rem;
+    }
+    @include respond (phonesmall){
+        padding-top: .6rem;
+        padding-right: 1.1rem;
+        padding-bottom: 0.6rem;
+        padding-left: 1.1rem;
+    }
+    @include respond (phonesmaller){
+        padding-top: .5rem;
+        padding-right: 1rem;
+        padding-bottom: 0.5rem;
+        padding-left: 1rem;
+    }
+    @include respond (phone300){
+        padding-top: .3rem;
+        padding-right: .8rem;
+        padding-bottom: .3rem;
+        padding-left: .8rem;
+    }
+    @include respond (phone260){
+        padding-top: 0.08rem;
+        padding-right: .5rem;
+        padding-bottom: .1rem;
+        padding-left: .5rem;
+    }
+}
+
+.button:hover {
+    background-position: left bottom;
+}
+
+.text {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: $color-white;
+    transition: all .6s ease-out;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    @include respond (phone500){
+        font-size: 1.7rem;
+        line-height: 2rem;
+        
+    }
+    
+    @include respond (phonesmall){
+        font-size: 1.7rem;
+        line-height: 1.8rem;
+    }
+    @include respond (phonesmaller){
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+    }
+    @include respond (phone300){
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+    }
+    @include respond (phone260){
+        font-size: 1.18rem;
+        line-height: 2.3rem;
+    }
+}
+
+.text:hover {
+    color: white;
+}

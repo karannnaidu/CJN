@@ -1,0 +1,198 @@
+.header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../img/1-small.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 113vh;
+  @media (min-resolution:10dpi){
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../img/1.png");
+  }
+  @include respond (phone){//width <600?
+    height: 90vh;
+}
+@include respond (phone){//width <600?
+  height: 90vh;
+}
+@include respond (phonesmall){//width <600?
+  height: 75vh;
+}
+  position: relative;
+
+  &__logo-box {
+    position: absolute;
+    top: 2.3rem;
+    left: 2.3rem;
+  }
+
+  &__logo {
+    height: 13rem;
+    @include respond (tab-huge){//width <1300?
+      height:12.5rem ;
+  }
+  @include respond (tab-large){//width <1300?
+    height:12rem ;
+}
+    @include respond(tab-land){//1200
+      height:11rem ;
+    }
+    @include respond(tab-lp){//1000
+      height:10rem ;
+    }
+    @include respond (tab-port){//width <900?
+      height: 9rem ;
+
+  }
+  @include respond(phonelarge){//750    height: 7.5rem;
+    height: 8rem ;
+      }
+
+
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 61%;
+    left: 27%;
+    width: 51%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    @include respond (tab-port){//width <900?
+    width: 60%;
+    margin-left: 10%;
+  
+  }
+    @include respond(phonelarge){
+      width: 80%;;//750    font-size: 7.5rem;
+     margin-left: 10%;
+        }
+        @include respond(phone500){
+          margin-top: 10%;
+          width: 90%;;//750    font-size: 7.5rem;
+         margin-left: 20%;
+            }
+  }
+
+  &__main {
+    display: inline-block;
+  
+    float: right;
+    list-style: none;
+    margin-top: 5.5rem;
+    position: absolute;
+    top: 0;
+    right: 5%;
+    @include respond(phone500){
+display: none;
+margin:10%;
+    }
+
+    &-nav {
+      display: inline-block;
+      margin-left: 7rem;
+
+      @include respond (tab-huge){//width <1300?
+        margin-left: 6rem; ;
+    }
+    @include respond (tab-large){//width <1300?
+      margin-left: 5.5rem; ;
+  }
+      @include respond(tab-land){
+        margin-left:5rem ;
+      }
+      @include respond(tab-lp){
+        margin-left:4.5rem ;
+      }
+      @include respond (tab-port){//width <900?
+        margin-left: 4rem ;
+  
+    }
+    @include respond(phonelarge){
+      margin-left: 3rem;
+        }
+        @include respond(phone500){
+          display: block;
+        margin-bottom: 2rem;
+        } 
+ 
+    }
+
+    &-nav a:link,
+    &-nav a:visited {
+      padding: 0.8rem 0px;
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 150%;
+      border-bottom: 2px solid transparent;
+      transition: border-bottom 0.2s;
+      font-weight: 300;
+      @include respond(tab-huge){
+        font-size:140% ;
+      }
+      @include respond(tab-large){
+        font-size:135% ;
+      }
+      @include respond(tab-land){
+        font-size:130% ;
+      }
+      @include respond (tab-lp){//width <900?
+        font-size: 125% ;
+  
+    }
+   
+      @include respond (tab-port){//width <900?
+        font-size: 120% ;
+  
+    }
+    @include respond(phonelarge){
+      font-size: 100%;
+        }
+    @include respond(phone){
+  font-size: 90%;
+    }
+    @include respond(phone500){
+      font-size: 145%;
+    } 
+
+    @include respond(phonesmall){
+ font-size: 135%;
+    } 
+ 
+    }
+
+    &-nav a:hover,
+    &-nav a:active {
+      border-bottom: 2px solid $secondary-color;
+    }
+  }
+}
+.mobile-nav-icon{
+  float: right;
+  margin-top: 1rem;
+  margin-right: 3rem;
+  cursor: pointer;
+  display: none;
+  @include respond(phone500){
+    display: inline-block;
+   // background-color: #ffffff;
+    
+  }
+}
+.menu {
+  font-size: 310%;
+  color: #fff;
+}
+.header__nav li{
+  display: block;
+  padding: 10px 0;
+  font-size: 100%;
+}
+.header__nav li a:visited,
+.header__nav li a:link{
+  display: block;
+  border: 0;
+
+
+}

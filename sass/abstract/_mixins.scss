@@ -1,0 +1,147 @@
+@mixin clearfix {
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin typo-main {
+
+    font-size: 4rem;
+    font-weight: 600;
+    font-family: 'Lora', serif;
+    letter-spacing: .7rem;
+}
+
+@mixin typo-sub {
+    margin-top: 5rem;
+    width: 70%;
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 143%;
+}
+@mixin absCenter{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+///MEDIA QUERY MANAGER
+/*0-600 PHONE
+600-900 TABLET 
+900-1200 TABLET LANDSCAPE
+[1200-1800] is where the normal styles apply
+1800+Big desktop
+*/
+
+/// $ breakpoint argument choices 
+//phone 
+//tab-port 
+//tab-land
+//big-desktop
+// ORDER: Base+typography >general layout + grid >page layout >components
+//1em=16px
+@mixin respond($breakpoint){
+    @if $breakpoint==phone260{
+        @media (max-width:16.25em){//260px
+            @content 
+        };
+    }
+    @if $breakpoint==phone300{
+        @media (max-width:18.75em){//300px
+            @content 
+        };
+    }
+
+    @if $breakpoint==phonesmaller{
+        @media (max-width:21.875em){//350px
+            @content 
+        };
+    }
+
+    @if $breakpoint==phonesmall{
+        @media (max-width:25em){//400px
+            @content 
+        };
+    }
+    @if $breakpoint==phone500{
+        @media (max-width:31.25em){//500px
+            @content 
+        };
+    }
+    @if $breakpoint==phone650{
+        @media (max-width:40.625em){//650px
+            @content 
+        };
+    }
+    @if $breakpoint==phone{
+        @media (max-width:37.5em){//600px
+            @content 
+        };
+    }
+    @if $breakpoint==phonelarge{
+        @media (max-width:46.875em){//750px
+            @content 
+        };
+    }
+ 
+    @if $breakpoint==tab800{
+        @media (max-width:50em){//800px
+            @content 
+        };
+    }
+ 
+        @if $breakpoint==tab-port{
+            @media (max-width:56.25em){//900px
+                @content 
+            };
+        }
+        @if $breakpoint==tab-lp{
+            @media (max-width:62.5em){//1000px
+                @content 
+            };
+        }
+        @if $breakpoint==tab1050{
+            @media (max-width:65.625em){//1050px
+                @content 
+            };
+        }
+        @if $breakpoint==tab1100{
+            @media (max-width:68.75em){//1100px
+                @content 
+            };
+        }
+            @if $breakpoint==tab-land{
+                @media (max-width:75em){//1200px
+                    @content 
+                };
+            }
+            @if $breakpoint==tab-large{
+                @media (max-width:81.25em){//1300px
+                    @content 
+                };
+            }
+            @if $breakpoint==tab-huge{
+                @media (max-width:87.25em){//1400px
+                    @content 
+                };
+            }
+            @if $breakpoint==desktop{
+                @media (max-width:90.625em){//1450px
+                    @content 
+                };
+            }
+            @if $breakpoint==desktop1480{
+                @media (max-width:92.5em){//1480px
+                    @content 
+                };
+            }
+                @if $breakpoint==big-desktop{
+                    @media (min-width:112.5em){//1800px
+                        @content 
+                    };
+                }
+    }
+    

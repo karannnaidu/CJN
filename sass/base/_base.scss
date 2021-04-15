@@ -1,0 +1,66 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // this defines  what 1 rem is 
+    font-size: 62.5%;
+
+    @include respond (tab-huge){//width <1300?
+        font-size:59%;//random 
+    }
+    @include respond (tab-large){//width <1300?
+        font-size:56%;//random 
+    }
+  
+    @include respond (tab-land){//width <1200?
+        font-size:52%;//1 rem =9px , 9/16=56.25%
+    }
+    @include respond (tab1100){//1100
+        font-size:51%;
+    }
+
+    @include respond (tab1050){//1050
+  font-size: 50%;
+    }
+
+    @include respond (tab-lp){//width <900?
+        font-size:49%;//1 rem =8px,,8/16 =50%
+    }
+    @include respond (tab-port){//width <900?
+        font-size:48%;//1 rem =8px,,8/16 =50%
+    }
+    @include respond (phonelarge){//width <750?
+        font-size:46%;//1 rem =7px,,7/16 =43%
+    }
+    @include respond (phone){//600
+        font-size:43%;//1 rem =7px,,7/16 =43%
+    }
+ 
+    @include respond(phonesmall){//400
+        font-size: 37%;//1rem=6px , 6/16=37%
+          }
+          @include respond(phone300){//300
+            font-size: 34%;
+              }
+              @include respond(phone260){//400
+                font-size: 31%;//1rem=5px , 5/16=31%
+                  }
+    @include respond (big-desktop){//1800
+        font-size:75%;// 1 rem  =12 ,12/16=75%
+    }
+}
+
+body {
+    box-sizing: border-box;
+    padding: 3rem;
+    @include respond (tab-port){//width <900?
+        padding:0;
+    }
+ 
+}
+

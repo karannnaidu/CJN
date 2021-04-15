@@ -1,0 +1,150 @@
+
+footer{
+  background-color: #333;
+ padding: 20px;
+
+}
+.footer-nav{
+list-style: none;
+float: left;
+
+}
+.social-links
+{
+  list-style: none;
+  float: right;
+  margin-top: 3rem;
+  margin-right: 3rem;
+}
+.footer-nav li,
+.social-links li{
+  display:inline-block;
+  margin-right: 20px;
+}
+.footer-nav li:last-child,
+.social-nav li:last-child{
+margin: 0;
+}
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li  a:link,
+.social-links li a:visited{
+ text-decoration: none;
+ border: 0;
+ color: #888;
+ transition: color 0.2s;
+
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active
+{
+color:#ddd;
+}
+.social-links li a:link,
+.social-links li a:visited{
+font-size: 250%;
+color: #ddd;
+}
+.ion-logo-facebook:hover
+{color:#3b5999;
+
+}
+.footer__nav {
+display: inline-block;
+margin-left: 4rem;
+
+@include respond (tab-huge){//width <1300?
+  margin-left: 3rem; ;
+}
+@include respond (tab-large){//width <1300?
+margin-left: 3.8rem; ;
+}
+@include respond(tab-land){
+  margin-left:3.5rem ;
+}
+@include respond(tab-lp){ 
+  margin-left:3rem ;
+}
+@include respond (tab-port){//width <900?
+  margin-left: 2.8rem ;
+
+}
+@include respond(phonelarge){
+margin-left: 2.5rem;
+  }
+  @include respond(phone500){
+  
+  margin-bottom: 1.5rem;
+  } 
+
+}
+
+.footer__nav a:link,
+.footer__nav a:visited {
+padding: 0.8rem 0px;
+color: #fff;
+text-decoration: none;
+text-transform: uppercase;
+font-size: 110%;
+border-bottom: 2px solid transparent;
+transition: border-bottom 0.2s;
+font-weight: 300;
+@include respond(tab-huge){
+  font-size:140% ;
+}
+@include respond(tab-large){
+  font-size:110% ;
+}
+@include respond(tab-land){
+  font-size:100% ;
+}
+@include respond (tab-lp){//width <900?
+  font-size: 95% ;
+
+}
+
+@include respond (tab-port){//width <900?
+  font-size: 90% ;
+
+}
+@include respond(phonelarge){
+font-size: 85%;
+  }
+@include respond(phone){
+font-size: 80%;
+}
+@include respond(phone500){
+font-size: 75%;
+} 
+
+@include respond(phonesmall){
+font-size: 75%;
+} 
+
+}
+
+.footer__nav a:hover,
+.footer__nav a:active {
+border-bottom: 2px solid $secondary-color;
+}
+
+
+footer p{
+color: #888;
+text-align: center;
+font-size: 90%;
+margin-top:10%;
+}
+.ion-logo-twitter:hover
+{
+color:  #55acee;
+}
+.ion-logo-instagram:hover
+{
+color: #e4405f;
+}
+.ion-logo-linkedin:hover
+{
+color: #0077B5;
+}
